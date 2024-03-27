@@ -1,4 +1,5 @@
-from random import choice, randint
+from dictionary import search_word_in_dictionary, extract_information
+
 
 # PROJECT FRIDAY:
 def get_response(user_input: str) -> str:
@@ -13,6 +14,13 @@ def get_response(user_input: str) -> str:
 
         if len(command) == 0 or command == '':
             return "Invalid command. Nothing was inputted."
+        
+
+        else:
+            word_json = search_word_in_dictionary(command)
+            word_type, word_definition, word_sentences = extract_information(word_json)
+
+            return f"The word type is {word_type} \n Definition: {word_definition}"
         
 
 
