@@ -67,24 +67,27 @@ def extract_information(word_info: str) -> str:
             if len(sample_sentences) == 2:
                 break
 
+    definitions = ''.join(definitions)
+    sample_sentences = ''.join(sample_sentences)
+
     return word_type, definitions, sample_sentences
 
 
 # Test main
-def main():
-    word = input("Enter a word to search in the Merriam-Webster Dictionary: ")
-    word_info = search_word_in_dictionary(word)
-    if word_info:
-        word_type, definitions, sample_sentences = extract_information(word_info)
-        print(f"Word Type: {word_type}")
-        print("Definitions:")
-        for definition in definitions:
-            print("-", definition)
-        print("Sample Sentences:")
-        for sentence in sample_sentences:
-            print("-", sentence)
-    else:
-        print("No information found for the word.")
+# def main():
+#     word = input("Enter a word to search in the Merriam-Webster Dictionary: ")
+#     word_info = search_word_in_dictionary(word)
+#     if word_info:
+#         word_type, definitions, sample_sentences = extract_information(word_info)
+#         print(f"Word Type: {word_type}")
+#         print("Definitions:")
+#         for definition in definitions:
+#             print("-", definition)
+#         print("Sample Sentences:")
+#         for sentence in sample_sentences:
+#             print("-", sentence)
+#     else:
+#         print("No information found for the word.")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

@@ -20,8 +20,8 @@ def get_response(user_input: str) -> str:
             word_json = search_word_in_dictionary(command)
             word_type, word_definition, word_sentences = extract_information(word_json)
 
-            return f"The word type is {word_type} \n Definition: {word_definition}"
-        
+            return f"The word type is {word_type} \n Definition: {word_definition} \n Sample Sentences: {word_sentences}"
+                
 
 
         # if lowered == '':
